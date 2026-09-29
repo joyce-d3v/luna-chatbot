@@ -56,7 +56,7 @@ export async function POST(request) {
     }
 
     const interaction = await ai.interactions.create({
-      model: "gemini-3.8-flash",
+      model: "gemini-3.8-flash-lite",
       input: message,
       system_instruction: LUNA_INSTRUCTIONS,
       ...(previousInteractionId
