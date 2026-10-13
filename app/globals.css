@@ -912,3 +912,155 @@ textarea {
 .file-upload-button input {
   display: none;
 }
+
+/* ---------- Attachment preview ---------- */
+
+.input-area-wrapper {
+width: 100%;
+max-width: 760px;
+margin: 0 auto;
+}
+
+.attachment-preview {
+display: flex;
+align-items: center;
+gap: 12px;
+width: fit-content;
+max-width: 100%;
+min-width: 220px;
+margin-bottom: 10px;
+padding: 10px 12px;
+background: #191b21;
+border: 1px solid #30323a;
+border-radius: 14px;
+}
+
+.attachment-thumbnail {
+width: 48px;
+height: 48px;
+object-fit: cover;
+border-radius: 9px;
+flex-shrink: 0;
+}
+
+.attachment-file-icon {
+width: 48px;
+height: 48px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #242630;
+border-radius: 9px;
+font-size: 22px;
+flex-shrink: 0;
+}
+
+.attachment-details {
+display: flex;
+flex-direction: column;
+gap: 5px;
+min-width: 0;
+}
+
+.attachment-details strong {
+max-width: 260px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+color: #ededf0;
+font-size: 13px;
+font-weight: 500;
+}
+
+.attachment-details span {
+color: #9295a1;
+font-size: 12px;
+}
+
+.remove-attachment {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 28px;
+height: 28px;
+flex-shrink: 0;
+border: none;
+border-radius: 8px;
+background: transparent;
+color: #a6a8b1;
+font-size: 21px;
+cursor: pointer;
+}
+
+.remove-attachment:hover {
+background: #30323a;
+color: #ffffff;
+}
+
+.remove-attachment:disabled {
+opacity: 0.5;
+cursor: not-allowed;
+}
+
+.attachment-error {
+margin: 0 0 10px;
+color: #ff8585;
+font-size: 13px;
+line-height: 1.5;
+}
+
+.hidden-file-input {
+display: none;
+}
+
+.sent-attachment {
+display: flex;
+align-items: center;
+gap: 10px;
+max-width: 100%;
+margin-top: 12px;
+padding: 10px 12px;
+border: 1px solid #363842;
+border-radius: 10px;
+background: #202229;
+}
+
+.sent-attachment > span {
+font-size: 22px;
+}
+
+.sent-attachment div {
+display: flex;
+flex-direction: column;
+gap: 4px;
+min-width: 0;
+}
+
+.sent-attachment strong {
+overflow-wrap: anywhere;
+font-size: 13px;
+font-weight: 500;
+}
+
+.sent-attachment small {
+color: #9295a1;
+font-size: 12px;
+}
+
+@media (max-width: 600px) {
+.attachment-preview {
+min-width: 0;
+width: fit-content;
+max-width: 100%;
+}
+
+.attachment-details strong {
+max-width: 180px;
+}
+
+.attachment-thumbnail,
+.attachment-file-icon {
+width: 42px;
+height: 42px;
+}
+}
