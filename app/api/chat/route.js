@@ -52,7 +52,7 @@ You can help with:
 Your goal is to be genuinely useful while keeping the conversation natural.
 `;
 
-const MAX_FILE_SIZE = 3 * 1024 * 1024;
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
 const ALLOWED_FILE_TYPES = new Set([
   "image/jpeg",
@@ -122,7 +122,7 @@ export async function POST(request) {
       ) {
         return Response.json(
           {
-            error: "Files must be smaller than or equal to 3 MB.",
+            error: "Files must be smaller than or equal to 10 MB.",
           },
           { status: 413 }
         );
